@@ -17,8 +17,8 @@ This project encompasses the following activities.
 - implement my personal image processing filter.
 
 ## Update
-ImageProcessor updated from XCode 7.3.1 (Swift 2) to XCode 11.5 (Swift 5.1).\
-Edits and modification is primarily based on an existing article, project by Khalid Asad<sup>[1]</sup>.\
+ImageProcessor updated from XCode 7.3.1 (Swift 2) to XCode 11.5 (Swift 5.1). \
+Edits and modification is primarily based on an existing article, project by Khalid Asad<sup>[1]</sup>. \
 Updated version can be found at link.
 https://github.com/yeuchi/Swift5ImageProcessor/blob/master/ImageProcessor.playground/Sources/RGBAImage.swift
 
@@ -28,11 +28,16 @@ Using in-class tutorial from Professor Parham Aarabi, below is the result of the
 
 ## Convolution Filter
 
-Implementation of kernenls and convolution is well described in Gonzolas & Woods' book[2].\ 
-Below 3x3 kernels are available.
+Convolution with 5 popular - 3x3 kernels well described in Gonzolas & Woods' text<sup>[2]</sup>.  
+
+#### Identity (same)
+<img width="358" alt="Screen Shot 2020-06-02 at 5 18 11 PM" src="https://user-images.githubusercontent.com/1282659/83575430-0f5e4300-a4f5-11ea-8152-a10bb75464f0.png">
 
 #### Sharpen (laplacian + identity)
 <img width="332" alt="Screen Shot 2020-06-02 at 4 16 38 PM" src="https://user-images.githubusercontent.com/1282659/83571020-a246af80-a4ec-11ea-9089-2c7772661a21.png">
+
+#### Blur (RECT function)
+<img width="358" alt="Screen Shot 2020-06-02 at 5 14 18 PM" src="https://user-images.githubusercontent.com/1282659/83575174-9101a100-a4f4-11ea-8524-e6ad7decd937.png">
 
 #### Sobel (x, y)
 <img width="358" alt="xDerive" src="https://user-images.githubusercontent.com/1282659/83570191-3d3e8a00-a4eb-11ea-81bc-c2b1ddb1545b.png"><img width="347" alt="yDerive" src="https://user-images.githubusercontent.com/1282659/83570194-3f084d80-a4eb-11ea-9b92-87976417f9cf.png">
