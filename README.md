@@ -30,7 +30,9 @@ Using in-class tutorial from Professor Parham Aarabi, below is the result of the
 
 Implementation of 5 popular kernels and convolution is well described in Gonzolas & Woods' book[2].\ 
 Below 3x3 kernels are available.
-#### Identity 
+#### Identity (same)
+<img width="358" alt="Screen Shot 2020-06-02 at 5 18 11 PM" src="https://user-images.githubusercontent.com/1282659/83575430-0f5e4300-a4f5-11ea-8152-a10bb75464f0.png">
+
 #### Sharpen (laplacian + identity)
 <img width="332" alt="Screen Shot 2020-06-02 at 4 16 38 PM" src="https://user-images.githubusercontent.com/1282659/83571020-a246af80-a4ec-11ea-9089-2c7772661a21.png">
 
