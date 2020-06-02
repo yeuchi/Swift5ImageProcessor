@@ -28,7 +28,8 @@ Using in-class tutorial from Professor Parham Aarabi, below is the result of the
 
 ## Convolution Filter
 
-Implementation of kernenls and convolution is well described in Gonzolas & Woods' book[2]. Below 3x3 kernels have been implemented.
+Implementation of kernenls and convolution is well described in Gonzolas & Woods' book[2].\ 
+Below 3x3 kernels are available.
 
 #### Sharpen
 <img width="318" alt="sharpen" src="https://user-images.githubusercontent.com/1282659/83570186-3b74c680-a4eb-11ea-8d0e-2e32cd0a3c20.png">
