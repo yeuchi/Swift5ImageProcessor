@@ -26,11 +26,11 @@ https://github.com/yeuchi/Swift5ImageProcessor/blob/master/ImageProcessor.playgr
 Using in-class tutorial from Professor Parham Aarabi, below is the result of the redShift (75x75).
 <img width="288" src="https://user-images.githubusercontent.com/1282659/83474607-010b1b00-a452-11ea-8f28-41546d8c9d37.png">
 
-## Implement Filter
+## Convolution Filter
 
-Implementation of kernenls and convolution is well described in Gonzolas & Woods' book[3]. Below filters have been implemented.
+Implementation of kernenls and convolution is well described in Gonzolas & Woods' book[2]. Below 3x3 kernels have been implemented.
 
-#### 3x3 sharpen
+#### Sharpen
 <img width="318" alt="sharpen" src="https://user-images.githubusercontent.com/1282659/83570186-3b74c680-a4eb-11ea-8d0e-2e32cd0a3c20.png">
 
 #### Sobel (x, y)
@@ -41,3 +41,6 @@ Implementation of kernenls and convolution is well described in Gonzolas & Woods
 
 1. How to Use UIkit for Low-Level Image Processing in Swift by Khalid Asad, 02/26/2020
 https://blog.avenuecode.com/how-to-use-uikit-for-low-level-image-processing-in-swift
+
+2. Digital Image Processing by Gonzalez and Woods, 1993. ISBN:0-201-50803-6
+- Convolution pg 189 - 215
