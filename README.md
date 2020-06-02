@@ -1,5 +1,5 @@
 # Swift5ImageProcessor
-ImageProcessor updated for XCode 11.5 Swift 5.1
+
 
 Coursera University of Toronto 
 iOS App Development with Swift Specialization
@@ -17,6 +17,7 @@ This project encompasses the following activities.
 - implement my personal image processing filter.
 
 ## Update
+ImageProcessor updated from XCode 7.3.1 (Swift 2) to XCode 11.5 (Swift 5.1).\
 Edits and modification is primarily based on an existing article, project by Khalid Asad<sup>[1]</sup>.\
 Updated version can be found at link.
 https://github.com/yeuchi/Swift5ImageProcessor/blob/master/ImageProcessor.playground/Sources/RGBAImage.swift
