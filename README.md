@@ -4,7 +4,7 @@ ImageProcessor updated for XCode 11.5 Swift 5.1
 Coursera University of Toronto 
 iOS App Development with Swift Specialization
 
-Introduction to Swift Programming with Professor Parham Aarabi<sup>[1]</sup>
+Introduction to Swift Programming with Professor Parham Aarabi.
 https://www.coursera.org/learn/swift-programming
 
 Forum
@@ -17,7 +17,7 @@ This project encompasses the following activities.
 - implement my personal image processing filter.
 
 ## Update
-Edits and modification is primarily based on an existing article, project by Khalid Asad.
+Edits and modification is primarily based on an existing article, project by Khalid Asad<sup>[1]</sup>.\
 Updated version can be found at link.
 https://github.com/yeuchi/Swift5ImageProcessor/blob/master/ImageProcessor.playground/Sources/RGBAImage.swift
 
