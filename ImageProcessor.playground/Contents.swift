@@ -63,58 +63,150 @@ let newImage2 = myRGBA.toUIImage()
 image
 
 /*
- * My personal filter
- * 3x3 convolution
+ * Description: My Insta Filter assignment - 3x3 spatial convolution filter
+ * Author: Chi Yeung
+ * Date: June 2, 2020
  */
 
-// define kernels: derivatives, laplacian + identity = sharpen
-let xSobel: [[Int]] = [[0, 0, 0], [0, 1, -1], [0, 0, 0]]
-let ySobel: [[Int]] = [[0, 0, 0], [0, 1, 0], [0, -1, 0]]
-let sharpen: [[Int]] = [[-1, -1, -1], [-1, 11, -1], [-1, -1, -1]]
 
 /*
- * define which filter you want to use [xSobel, ySobel, sharpen] ?
+ * STEP 3: Create the image processor
+ * a. Encapsulate your chosen Filter parameters and/or formulas in a struct/class definition.
+ *
+ * b. Create and test an ImageProcessor class/struct to manage an arbitrary number Filter instances to apply to an image. It should allow you to specify the order of application for the Filters.
  */
-let filter = sharpen
-
-
-// Denominator: find kernel sum
-var denominator = 0
-for cy in 0..<3 {
-    for cx in 0..<3 {
-        denominator += filter[cx][cy]
-    }
-}
-if(denominator == 0) {
-    denominator = 1
-}
-else if (denominator < 0) {
-    denominator *= -1
+enum KernelType {
+    case xSobel
+    case ySobel
+    case sharpen
+    case blur
+    case identity
 }
 
-// step through ALL pixels except boundary
-for y in 1..<myRGBA.height-1 {
-    for x in 1..<myRGBA.width-1 {
-        var sumRed = 0
-        var sumGreen = 0
-        var sumBlue = 0
-        
-        // integrate, convolve with kernel (index -1 -> 1)
-        for cy in 0..<3 {
-            for cx in 0..<3 {
-                let i = (y+(cy-1)) * myRGBA.width + (x+(cx-1))
-                let pix = myRGBA.pixels[i]
-                sumRed += Int(pix.red) * filter[cx][cy]
-                sumGreen += Int(pix.green) * filter[cx][cy]
-                sumBlue += Int(pix.blue) * filter[cx][cy]
-            }
+struct FilterParams {
+    /*
+     * Rubric:
+     * Is there an interface to apply specific default filter formulas/parameters to an image, by specifying each configuration’s name as a String? Maximum of 2 pts
+     */
+    var listKernel:[KernelType] = [KernelType.identity]
+    
+    /*
+     * STEP 4: Create predefined filters
+     * - Create five reasonable default Filter configurations
+     *
+     * Define 3x3 kernels:
+     * Sobel: derivatives
+     * sharpen: laplacian + identity
+     * blur: average
+     */
+    private let identity: [[Int]] = [[0, 0, 0], [0, 1, 0], [0, 0, 0]]
+    private let xSobel: [[Int]] = [[0, 0, 0], [0, 1, -1], [0, 0, 0]]
+    private let ySobel: [[Int]] = [[0, 0, 0], [0, 1, 0], [0, -1, 0]]
+    private let sharpen: [[Int]] = [[-1, -1, -1], [-1, 11, -1], [-1, -1, -1]]
+    private let blur: [[Int]] = [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+    
+    func getKernel(type:KernelType) -> [[Int]] {
+        switch(type) {
+        case KernelType.xSobel:
+            return xSobel
+            
+        case KernelType.ySobel:
+            return ySobel
+            
+        case KernelType.sharpen:
+            return sharpen
+            
+        case KernelType.identity:
+            return identity
+            
+        case KernelType.blur:
+            return blur
         }
-        let ii = y * myRGBA.width + x
-        myRGBA.pixels[ii].red = UInt8(max(0, min(255, sumRed/denominator)))
-        myRGBA.pixels[ii].green = UInt8(max(0, min(255, sumGreen/denominator)))
-        myRGBA.pixels[ii].blue = UInt8(max(0, min(255, sumBlue/denominator)))
     }
 }
-let convolvedImage = myRGBA.toUIImage()
-newImage2
 
+/*
+ * STEP 5: Apply predefined filters
+ * In the ImageProcessor interface create a new method to apply a predefined filter giving its name as a String parameter. The ImageProcessor interface should be able to look up the filter and apply it.
+ *
+ * !! User may add N filters in sequential processing !!
+ *
+ * Rubric:
+ * Is there an interface to specify the order and parameters for an arbitrary number of filter calculations that should be applied to an image? Maximum of 2 pts
+ */
+var params = FilterParams()
+params.listKernel.append(KernelType.sharpen)
+params.listKernel.append(KernelType.blur)
+//params.listKernel.append(KernelType.xSobel)
+//params.listKernel.append(KernelType.ySoble)
+
+
+
+for k in 0..<params.listKernel.count {
+    
+    // iterate through all selected kernels
+    let kernelType = params.listKernel[k]
+    let filter = params.getKernel(type:kernelType)
+
+    // Denominator: find kernel sum
+    var denominator = 0
+    for cy in 0..<3 {
+        for cx in 0..<3 {
+            denominator += filter[cx][cy]
+        }
+    }
+    if(denominator == 0) {
+        denominator = 1
+    }
+    else if (denominator < 0) {
+        denominator *= -1
+    }
+
+    /*
+     * Rubric:
+     * Does the playground code apply a filter to each pixel of the image? Maximum of 2 pts
+     */
+    for y in 0..<myRGBA.height {
+        for x in 0..<myRGBA.width {
+            var sumRed = 0
+            var sumGreen = 0
+            var sumBlue = 0
+            
+            // integrate, convolve with kernel (index -1 -> 1)
+            for cy in 0..<3 {
+                for cx in 0..<3 {
+                    
+                    // constraint pixel index -> in bound
+                    var yy = y + cy - 1
+                    if(yy < 0){
+                        yy = 0
+                    }
+                    else if (yy >= myRGBA.height) {
+                        yy = myRGBA.height-1
+                    }
+                    
+                    var xx = x + cx - 1
+                    if(xx < 0){
+                        xx = 0
+                    }
+                    else if (xx >= myRGBA.width) {
+                        xx = myRGBA.width-1
+                    }
+                    
+                    // do integration
+                    let i = yy * myRGBA.width + xx
+                    let pix = myRGBA.pixels[i]
+                    sumRed += Int(pix.red) * filter[cx][cy]
+                    sumGreen += Int(pix.green) * filter[cx][cy]
+                    sumBlue += Int(pix.blue) * filter[cx][cy]
+                }
+            }
+            let ii = y * myRGBA.width + x
+            myRGBA.pixels[ii].red = UInt8(max(0, min(255, sumRed/denominator)))
+            myRGBA.pixels[ii].green = UInt8(max(0, min(255, sumGreen/denominator)))
+            myRGBA.pixels[ii].blue = UInt8(max(0, min(255, sumBlue/denominator)))
+        }
+    }
+    let convolvedImage = myRGBA.toUIImage()
+    newImage2
+}
