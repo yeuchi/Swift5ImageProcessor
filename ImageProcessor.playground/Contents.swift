@@ -83,12 +83,18 @@ enum KernelType {
     case identity
 }
 
+enum EffectLevel {
+    case small
+    case large
+}
+
 struct FilterParams {
     /*
      * Rubric:
      * Is there an interface to apply specific default filter formulas/parameters to an image, by specifying each configuration’s name as a String? Maximum of 2 pts
      */
     var listKernel:[KernelType] = [KernelType.identity]
+    var effectLevel:EffectLevel = EffectLevel.small
     
     /*
      * STEP 4: Create predefined filters
@@ -98,29 +104,36 @@ struct FilterParams {
      * Sobel: derivatives
      * sharpen: laplacian + identity
      * blur: average
+     *
+     * Rubric:
+     * Are there parameters for each filter formula that can change the intensity of the effect of the filter? Maximum of 3 pts
      */
     private let identity: [[Int]] = [[0, 0, 0], [0, 1, 0], [0, 0, 0]]
-    private let xSobel: [[Int]] = [[0, 0, 0], [0, 1, -1], [0, 0, 0]]
-    private let ySobel: [[Int]] = [[0, 0, 0], [0, 1, 0], [0, -1, 0]]
-    private let sharpen: [[Int]] = [[-1, -1, -1], [-1, 11, -1], [-1, -1, -1]]
-    private let blur: [[Int]] = [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+    private let xSobel_small: [[Int]] = [[0, 0, 0], [0, 1, -1], [0, 0, 0]]
+    private let xSobel_large: [[Int]] = [[0, 1, -1], [0, 1, -1], [0, 1, -1]]
+    private let ySobel_small: [[Int]] = [[0, 0, 0], [0, 1, 0], [0, -1, 0]]
+    private let ySobel_large: [[Int]] = [[0, 0, 0], [1, 1, 1], [-1, -1, -1]]
+    private let sharpen_small: [[Int]] = [[-1, -1, -1], [-1, 14, -1], [-1, -1, -1]]
+    private let sharpen_large: [[Int]] = [[-1, -1, -1], [-1, 10, -1], [-1, -1, -1]]
+    private let blur_small: [[Int]] = [[1, 1, 1], [1, 5, 1], [1, 1, 1]]
+    private let blur_large: [[Int]] = [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
     
     func getKernel(type:KernelType) -> [[Int]] {
         switch(type) {
         case KernelType.xSobel:
-            return xSobel
+            return effectLevel == EffectLevel.small ? xSobel_small : xSobel_large
             
         case KernelType.ySobel:
-            return ySobel
+            return effectLevel == EffectLevel.small ? ySobel_small : ySobel_large
             
         case KernelType.sharpen:
-            return sharpen
+            return effectLevel == EffectLevel.small ? sharpen_small : sharpen_large
             
         case KernelType.identity:
             return identity
             
         case KernelType.blur:
-            return blur
+            return effectLevel == EffectLevel.small ? blur_small : blur_large
         }
     }
 }
@@ -135,6 +148,7 @@ struct FilterParams {
  * Is there an interface to specify the order and parameters for an arbitrary number of filter calculations that should be applied to an image? Maximum of 2 pts
  */
 var params = FilterParams()
+params.effectLevel = EffectLevel.large
 params.listKernel.append(KernelType.sharpen)
 params.listKernel.append(KernelType.blur)
 //params.listKernel.append(KernelType.xSobel)
