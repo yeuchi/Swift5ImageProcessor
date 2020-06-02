@@ -3,28 +3,44 @@
    version = "3.0">
    <TimelineItems>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "file:///Users/ctyeung/Documents/GitHub/iOS/Coursera/ImageProcessor.playground#CharacterRangeLen=124&amp;CharacterRangeLoc=127&amp;EndingColumnNumber=32&amp;EndingLineNumber=13&amp;StartingColumnNumber=21&amp;StartingLineNumber=6&amp;Timestamp=612758347.655429"
+         documentLocation = "file:///Users/ctyeung/Documents/GitHub/iOS/Coursera/Swift5ImageProcessor/ImageProcessor.playground#CharacterRangeLen=124&amp;CharacterRangeLoc=127&amp;EndingColumnNumber=32&amp;EndingLineNumber=13&amp;StartingColumnNumber=21&amp;StartingLineNumber=6&amp;Timestamp=612824682.313529"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "file:///Users/ctyeung/Documents/GitHub/iOS/Coursera/ImageProcessor.playground#CharacterRangeLen=0&amp;CharacterRangeLoc=67&amp;EndingColumnNumber=0&amp;EndingLineNumber=3&amp;StartingColumnNumber=0&amp;StartingLineNumber=3&amp;Timestamp=612758347.655596"
+         documentLocation = "file:///Users/ctyeung/Documents/GitHub/iOS/Coursera/Swift5ImageProcessor/ImageProcessor.playground#CharacterRangeLen=0&amp;CharacterRangeLoc=67&amp;EndingColumnNumber=0&amp;EndingLineNumber=3&amp;StartingColumnNumber=0&amp;StartingLineNumber=3&amp;Timestamp=612824682.313709"
          lockedSize = "{175, 50}"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "file:///Users/ctyeung/Documents/GitHub/iOS/Coursera/ImageProcessor.playground#CharacterRangeLen=5&amp;CharacterRangeLoc=73&amp;EndingColumnNumber=10&amp;EndingLineNumber=4&amp;StartingColumnNumber=5&amp;StartingLineNumber=4&amp;Timestamp=612758347.655731"
+         documentLocation = "file:///Users/ctyeung/Documents/GitHub/iOS/Coursera/Swift5ImageProcessor/ImageProcessor.playground#CharacterRangeLen=5&amp;CharacterRangeLoc=73&amp;EndingColumnNumber=10&amp;EndingLineNumber=4&amp;StartingColumnNumber=5&amp;StartingLineNumber=4&amp;Timestamp=612824682.313817"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "file:///Users/ctyeung/Documents/GitHub/iOS/Coursera/ImageProcessor.playground#CharacterRangeLen=9&amp;CharacterRangeLoc=1233&amp;EndingColumnNumber=14&amp;EndingLineNumber=60&amp;StartingColumnNumber=5&amp;StartingLineNumber=60&amp;Timestamp=612758347.655867"
+         documentLocation = "file:///Users/ctyeung/Documents/GitHub/iOS/Coursera/Swift5ImageProcessor/ImageProcessor.playground#CharacterRangeLen=9&amp;CharacterRangeLoc=1233&amp;EndingColumnNumber=14&amp;EndingLineNumber=60&amp;StartingColumnNumber=5&amp;StartingLineNumber=60&amp;Timestamp=612824682.313915"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "file:///Users/ctyeung/Documents/GitHub/iOS/Coursera/ImageProcessor.playground#CharacterRangeLen=39&amp;CharacterRangeLoc=1265&amp;EndingColumnNumber=0&amp;EndingLineNumber=68&amp;StartingColumnNumber=1&amp;StartingLineNumber=62&amp;Timestamp=612758347.655988"
+         documentLocation = "file:///Users/ctyeung/Documents/GitHub/iOS/Coursera/Swift5ImageProcessor/ImageProcessor.playground#CharacterRangeLen=5&amp;CharacterRangeLoc=1265&amp;EndingColumnNumber=0&amp;EndingLineNumber=63&amp;StartingColumnNumber=1&amp;StartingLineNumber=62&amp;Timestamp=612824682.314008"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/ctyeung/Documents/GitHub/iOS/Coursera/Swift5ImageProcessor/ImageProcessor.playground#CharacterRangeLen=15&amp;CharacterRangeLoc=2663&amp;EndingColumnNumber=19&amp;EndingLineNumber=112&amp;StartingColumnNumber=4&amp;StartingLineNumber=112&amp;Timestamp=612824682.3141021"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/ctyeung/Documents/GitHub/iOS/Coursera/Swift5ImageProcessor/ImageProcessor.playground#CharacterRangeLen=9&amp;CharacterRangeLoc=2700&amp;EndingColumnNumber=0&amp;EndingLineNumber=114&amp;StartingColumnNumber=1&amp;StartingLineNumber=113&amp;Timestamp=612824682.314196"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/ctyeung/Documents/GitHub/iOS/Coursera/Swift5ImageProcessor/ImageProcessor.playground#CharacterRangeLen=15&amp;CharacterRangeLoc=2663&amp;EndingColumnNumber=19&amp;EndingLineNumber=112&amp;StartingColumnNumber=4&amp;StartingLineNumber=112&amp;Timestamp=612824682.3143179"
+         lockedSize = "{179, 88}"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>

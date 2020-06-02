@@ -64,5 +64,52 @@ image
 
 /*
  * My personal filter
- * 
+ * 1. 3x3 convolution
+ * 2. histogram equalization
  */
+
+// kernels
+let xSobel: [[Int]] = [[0, 0, 0], [0, 1, -1], [0, 0, 0]]
+let ySobel: [[Int]] = [[0, 0, 0], [0, 1, 0], [0, -1, 0]]
+let sharpen: [[Int]] = [[-1, -1, -1], [-1, 10, -1], [-1, -1, -1]]
+
+// find kernel sum
+var denominator = 0
+for cy in 0..<3 {
+    for cx in 0..<3 {
+        denominator += sharpen[cx][cy]
+    }
+}
+if(denominator == 0) {
+    denominator = 1
+}
+else if (denominator < 0) {
+    denominator *= -1
+}
+
+// step through ALL pixels except boundary
+for y in 1..<myRGBA.height-1 {
+    for x in 1..<myRGBA.width-1 {
+        var sumRed = 0
+        var sumGreen = 0
+        var sumBlue = 0
+        
+        // integrate, convolve with kernel (index -1 -> 1)
+        for cy in 0..<3 {
+            for cx in 0..<3 {
+                let i = (y+(cy-1)) * myRGBA.width + (x+(cx-1))
+                var pix = myRGBA.pixels[i]
+                sumRed += Int(pix.red) * sharpen[cx][cy]
+                sumGreen += Int(pix.green) * sharpen[cx][cy]
+                sumBlue += Int(pix.blue) * sharpen[cx][cy]
+            }
+        }
+        let ii = y * myRGBA.width + x
+        myRGBA.pixels[ii].red = UInt8(max(0, min(255, sumRed/denominator)))
+        myRGBA.pixels[ii].green = UInt8(max(0, min(255, sumGreen/denominator)))
+        myRGBA.pixels[ii].blue = UInt8(max(0, min(255, sumBlue/denominator)))
+    }
+}
+let convolvedImage = myRGBA.toUIImage()
+newImage2
+
