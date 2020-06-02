@@ -83,6 +83,9 @@ enum KernelType {
     case identity
 }
 
+/*
+ * The formula should have parameters that can be modified so that the filter can have a small or large effect on the image.
+ */
 enum EffectLevel {
     case small
     case large
@@ -92,6 +95,8 @@ struct FilterParams {
     /*
      * Rubric:
      * Is there an interface to apply specific default filter formulas/parameters to an image, by specifying each configuration’s name as a String? Maximum of 2 pts
+     *
+     * Are there parameters for each filter formula that can change the intensity of the effect of the filter? Maximum of 3 pts
      */
     var listKernel:[KernelType] = [KernelType.identity]
     var effectLevel:EffectLevel = EffectLevel.small
@@ -100,13 +105,12 @@ struct FilterParams {
      * STEP 4: Create predefined filters
      * - Create five reasonable default Filter configurations
      *
-     * Define 3x3 kernels:
+     * Define 3x3 kernels (could be different size 5x5, 7x7.. but too slow)
      * Sobel: derivatives
      * sharpen: laplacian + identity
      * blur: average
      *
      * Rubric:
-     * Are there parameters for each filter formula that can change the intensity of the effect of the filter? Maximum of 3 pts
      */
     private let identity: [[Int]] = [[0, 0, 0], [0, 1, 0], [0, 0, 0]]
     private let xSobel_small: [[Int]] = [[0, 0, 0], [0, 1, -1], [0, 0, 0]]
