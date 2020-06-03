@@ -61,15 +61,15 @@ var params = FilterParams() \
 params.listKernel.append(KernelType.sharpen) \
 params.listKernel.append(KernelType.blur) \
 //params.listKernel.append(KernelType.xSobel) \
-//params.listKernel.append(KernelType.ySoble) \
+//params.listKernel.append(KernelType.ySoble) 
 
 #### Effect level
 Rubric requires that a 'small' or 'large' effect be available. \
 Hence, I have implemented 2 types of kernel for each filter for easy selection. \
-Otherwise, user is free to edit the kernel(s) directly. \
+Otherwise, user is free to edit the kernel(s) directly. 
 
 params.effectLevel = EffectLevel.large \
-params.effectLevel = EffectLevel.small \
+params.effectLevel = EffectLevel.small 
 
 
 # Reference
