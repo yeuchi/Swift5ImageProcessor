@@ -36,20 +36,20 @@ For this exercise which only requires 2 effects ('small' or 'large'), I am creat
 <img width="358" alt="Screen Shot 2020-06-02 at 5 18 11 PM" src="https://user-images.githubusercontent.com/1282659/83575430-0f5e4300-a4f5-11ea-8152-a10bb75464f0.png">
 
 #### Sharpen (laplacian + identity)
-kernel (small effect): [[-1, -1, -1], [-1, 14, -1], [-1, -1, -1]]
-kernel (large effect): [[-1, -1, -1], [-1, 10, -1], [-1, -1, -1]]
+kernel (small effect): [[-1, -1, -1], [-1, 14, -1], [-1, -1, -1]] \
+kernel (large effect): [[-1, -1, -1], [-1, 10, -1], [-1, -1, -1]] \
 <img width="332" alt="Screen Shot 2020-06-02 at 4 16 38 PM" src="https://user-images.githubusercontent.com/1282659/83571020-a246af80-a4ec-11ea-9089-2c7772661a21.png">
 
 #### Blur (RECT function)
-kernel (small effect): [[1, 1, 1], [1, 5, 1], [1, 1, 1]]
-kernel (large effect): [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+kernel (small effect): [[1, 1, 1], [1, 5, 1], [1, 1, 1]] \
+kernel (large effect): [[1, 1, 1], [1, 1, 1], [1, 1, 1]] \
 <img width="358" alt="Screen Shot 2020-06-02 at 5 14 18 PM" src="https://user-images.githubusercontent.com/1282659/83575174-9101a100-a4f4-11ea-8524-e6ad7decd937.png">
 
 #### Sobel (x, y)
-kernel (small effect): [[0, 0, 0], [0, 1, -1], [0, 0, 0]]
-kernel (large effect): [[0, 1, -1], [0, 1, -1], [0, 1, -1]]
-kernel (small effect): [[0, 0, 0], [0, 1, 0], [0, -1, 0]]
-kernel (large effect): [[0, 0, 0], [1, 1, 1], [-1, -1, -1]]
+kernel (small effect): [[0, 0, 0], [0, 1, -1], [0, 0, 0]] \
+kernel (large effect): [[0, 1, -1], [0, 1, -1], [0, 1, -1]] \
+kernel (small effect): [[0, 0, 0], [0, 1, 0], [0, -1, 0]] \
+kernel (large effect): [[0, 0, 0], [1, 1, 1], [-1, -1, -1]] \
 <img width="358" alt="xDerive" src="https://user-images.githubusercontent.com/1282659/83570191-3d3e8a00-a4eb-11ea-81bc-c2b1ddb1545b.png"><img width="347" alt="yDerive" src="https://user-images.githubusercontent.com/1282659/83570194-3f084d80-a4eb-11ea-9b92-87976417f9cf.png">
 
 
