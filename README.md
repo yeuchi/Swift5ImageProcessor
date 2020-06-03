@@ -40,7 +40,7 @@ kernel (small effect): [[-1, -1, -1], [-1, 14, -1], [-1, -1, -1]] \
 kernel (large effect): [[-1, -1, -1], [-1, 10, -1], [-1, -1, -1]] \
 <img width="332" alt="Screen Shot 2020-06-02 at 4 16 38 PM" src="https://user-images.githubusercontent.com/1282659/83571020-a246af80-a4ec-11ea-9089-2c7772661a21.png">
 
-#### Blur (RECT function)
+#### Blur (Gaussian, RECT function)
 kernel (small effect): [[1, 1, 1], [1, 5, 1], [1, 1, 1]] \
 kernel (large effect): [[1, 1, 1], [1, 1, 1], [1, 1, 1]] \
 <img width="358" alt="Screen Shot 2020-06-02 at 5 14 18 PM" src="https://user-images.githubusercontent.com/1282659/83575174-9101a100-a4f4-11ea-8524-e6ad7decd937.png">
