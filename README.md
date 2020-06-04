@@ -53,7 +53,7 @@ kernel (large effect): [[0, 0, 0], [1, 1, 1], [-1, -1, -1]] \
 <img width="358" alt="xDerive" src="https://user-images.githubusercontent.com/1282659/83570191-3d3e8a00-a4eb-11ea-81bc-c2b1ddb1545b.png"><img width="347" alt="yDerive" src="https://user-images.githubusercontent.com/1282659/83570194-3f084d80-a4eb-11ea-9b92-87976417f9cf.png">
 
 #### Arbitrary filter selection
-Image processor looks N times to exhauset all available kernel types available in listKernel array. \
+Image processor loops N times to exhauset all available kernel types available in listKernel array. \
 To define the type and order of operation, append a valid KernelType into the listKernel array. \
 By default, there is an identify filter in the list.  Below are some examples.
 
