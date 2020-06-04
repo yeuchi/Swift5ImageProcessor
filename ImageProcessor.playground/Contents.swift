@@ -68,7 +68,6 @@ image
  * Date: June 2, 2020
  */
 
-
 /*
  * STEP 3: Create the image processor
  * a. Encapsulate your chosen Filter parameters and/or formulas in a struct/class definition.
@@ -109,8 +108,6 @@ struct FilterParams {
      * Sobel: derivatives
      * sharpen: laplacian + identity
      * blur: average
-     *
-     * Rubric:
      */
     private let identity: [[Int]] = [[0, 0, 0], [0, 1, 0], [0, 0, 0]]
     private let xSobel_small: [[Int]] = [[0, 0, 0], [0, 1, -1], [0, 0, 0]]
@@ -150,6 +147,9 @@ struct FilterParams {
  *
  * Rubric:
  * Is there an interface to specify the order and parameters for an arbitrary number of filter calculations that should be applied to an image? Maximum of 2 pts
+ *
+ * User may add N arbitrary kernels (filters) below.
+ * User may edit effect level below
  */
 var params = FilterParams()
 params.effectLevel = EffectLevel.large
@@ -157,8 +157,6 @@ params.listKernel.append(KernelType.sharpen)
 params.listKernel.append(KernelType.blur)
 //params.listKernel.append(KernelType.xSobel)
 //params.listKernel.append(KernelType.ySoble)
-
-
 
 for k in 0..<params.listKernel.count {
     
