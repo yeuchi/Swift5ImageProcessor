@@ -74,7 +74,7 @@ params.effectLevel = EffectLevel.small
 
 # Reference
 
-1. How to Use UIkit for Low-Level Image Processing in Swift by Khalid Asad, 02/26/2020
+1. How to Use UIkit for Low-Level Image Processing in Swift by Khalid Asad, 02/26/2020 \
 https://blog.avenuecode.com/how-to-use-uikit-for-low-level-image-processing-in-swift
 
 2. Digital Image Processing by Gonzalez and Woods, 1993. ISBN:0-201-50803-6
