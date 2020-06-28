@@ -23,13 +23,13 @@ Updated version can be found at link.
 https://github.com/yeuchi/Swift5ImageProcessor/blob/master/ImageProcessor.playground/Sources/RGBAImage.swift
 
 ## Sample Code Demo
-Using in-class tutorial from Professor Parham Aarabi, below is the result of the redShift (75x75).
+Using in-class tutorial from Professor Parham Aarabi, below is the result of the redShift (75x75). \
 <img width="288" src="https://user-images.githubusercontent.com/1282659/83474607-010b1b00-a452-11ea-8f28-41546d8c9d37.png">
 
 ## Convolution Filter
 
-Convolution with 5 popular - 3x3 kernels well described in Gonzolas & Woods' text<sup>[2]</sup>.  
-Filter magnitude or effect level can be potentially be varied by the filter width (For example: 5x5, 7x7, etc).  
+Convolution with 5 popular - 3x3 kernels well described in Gonzolas & Woods' text<sup>[2]</sup>.  \
+Filter magnitude or effect level can be potentially be varied by the filter width (For example: 5x5, 7x7, etc).  \
 For this exercise which only requires 2 effects ('small' or 'large'), I am creating 2 versions of each filter (exclude Identity).
 
 #### Identity (same)
