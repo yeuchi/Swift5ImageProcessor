@@ -4,7 +4,7 @@
 Coursera University of Toronto 
 iOS App Development with Swift Specialization
 
-Introduction to Swift Programming with Professor Parham Aarabi.
+Introduction to Swift Programming with Professor Parham Aarabi. \
 https://www.coursera.org/learn/swift-programming
 
 Forum
@@ -77,5 +77,5 @@ params.effectLevel = EffectLevel.small
 1. How to Use UIkit for Low-Level Image Processing in Swift by Khalid Asad, 02/26/2020 \
 https://blog.avenuecode.com/how-to-use-uikit-for-low-level-image-processing-in-swift
 
-2. Digital Image Processing by Gonzalez and Woods, 1993. ISBN:0-201-50803-6
+2. Digital Image Processing by Gonzalez and Woods, 1993. ISBN:0-201-50803-6 \
 - Convolution pg 189 - 215
